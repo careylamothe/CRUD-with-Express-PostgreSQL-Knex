@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+  div
+    h1="Showing Album: " + theAlbum.name
+    h3="Genre: " + theAlbum.genre
+    h3="Artist: " + theAlbum.artist
+
+  a(href="/albums/" + theAlbum.id + '/edit') Edit
+
+  div
+    form(action="/albums/" + theAlbum.id + "/delete?_method=DELETE", method="POST")
+      button(type="submit") Delete

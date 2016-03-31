@@ -1,0 +1,43 @@
+extends ../layout
+
+block content
+  h1 New Album
+
+  form(action="/albums", method="post")
+    div
+      h3 Artist
+      input(type="text" name="artist")
+
+    div
+      h3 Album
+      input(type="text" name="album_name")
+
+    div
+      h3 Genre
+      select(name="genre")
+        option Pop
+        option Jazz
+        option Country
+        option Classical
+    div
+      h3 Stars
+      label 1
+      input(type="radio" name="star_rating" value="1")
+      input(type="radio" name="star_rating" value="2")
+      input(type="radio" name="star_rating" value="3")
+      input(type="radio" name="star_rating" value="4")
+      input(type="radio" name="star_rating" value="5")
+      label 5
+
+    br
+
+    div
+      input(type="checkbox")
+      label contains explicit lyrics
+
+    br
+
+    div
+      label Create Albumn
+      input(type="submit")
+      a(href="/albums") Cancel
